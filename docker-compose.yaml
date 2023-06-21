@@ -2,12 +2,14 @@ version: '3'
 
 services:
   frontend:
+    image: veerasolaiyappan/web-app
     build:
       context: ./web-app
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
   backend:
+    image: veerasolaiyappan/go-api
     build:
       context: ./go-api
       dockerfile: Dockerfile
